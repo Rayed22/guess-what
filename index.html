@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>For You ❤️</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playpen+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playpen+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <div id="app">
         <!-- Floating hearts container -->
         <div id="hearts-container"></div>
-        
+
         <!-- Secret heart -->
         <div id="secret-heart" class="hidden">❤️</div>
 
@@ -22,10 +26,10 @@
         <div id="screen-1" class="screen visible fade-in">
             <h1 class="main-text suspense-text">Hey, guess what... 👀</h1>
             <div id="s1-content1" class="hidden">
-                <p class="typing-text">I have something to tell you.</p>
+                <p id="s1-p1" class="typing-text">I have something to tell you.</p>
             </div>
             <div id="s1-content2" class="hidden">
-                <p class="typing-text">Actually... maybe you should guess first. 😏</p>
+                <p id="s1-p2" class="typing-text">Actually... maybe you should guess first. 😏</p>
                 <div class="buttons-container stack-buttons">
                     <button class="btn disappearing-btn" data-reply="okay">Okay, tell me 👀</button>
                     <button class="btn disappearing-btn" data-reply="guess">Hmm... let me guess 🤔</button>
@@ -35,7 +39,8 @@
                 <p id="s1-response-text" class="typing-text"></p>
                 <div id="s1-response-continue" class="hidden mt-2">
                     <p class="typing-text hint-text">Okay, here's a hint...</p>
-                    <p class="typing-text hidden" id="s1-hint1">It's something I've wanted to say to you for a while.</p>
+                    <p class="typing-text hidden" id="s1-hint1">It's something I've wanted to say to you for a while.
+                    </p>
                     <p class="typing-text hidden" id="s1-hint2">And no, it's not about pizza. 🍕</p>
                 </div>
             </div>
@@ -43,10 +48,18 @@
 
         <!-- Screen 2: Suspense Builder -->
         <div id="screen-2" class="screen hidden">
-            <div id="s2-p1" class="hidden"><p class="typing-text">There is something I’ve been meaning to tell you...</p></div>
-            <div id="s2-p2" class="hidden"><p class="typing-text">Something very important.</p></div>
-            <div id="s2-p3" class="hidden"><p class="typing-text">Something I probably should have said a long time ago.</p></div>
-            <div id="s2-p4" class="hidden"><p class="typing-text">But first...</p></div>
+            <div id="s2-p1" class="hidden">
+                <p class="typing-text">There is something I’ve been meaning to tell you...</p>
+            </div>
+            <div id="s2-p2" class="hidden">
+                <p class="typing-text">Something very important.</p>
+            </div>
+            <div id="s2-p3" class="hidden">
+                <p class="typing-text">Something I probably should have said a long time ago.</p>
+            </div>
+            <div id="s2-p4" class="hidden">
+                <p class="typing-text">But first...</p>
+            </div>
             <div id="s2-btn-container" class="hidden mt-2">
                 <button id="s2-btn" class="btn disappearing-btn">Tell me already 😭</button>
             </div>
@@ -62,7 +75,7 @@
             <p id="s3-p3" class="typing-text hidden">I...</p>
             <p id="s3-p4" class="typing-text hidden">really...</p>
             <p id="s3-p5" class="typing-text hidden">really...</p>
-            
+
             <div id="s3-reveal" class="hidden pizza-reveal">
                 <h1 class="bounce">like... pizza 🍕</h1>
                 <div class="meme-card bounce mt-2" style="animation-delay: 0.5s">
@@ -72,7 +85,8 @@
                         Me: 😭❤️😭❤️
                     </div>
                 </div>
-                <p class="typing-text mt-2" style="animation-duration: 0.5s">Okay okay, stop looking at me like that 😭</p>
+                <p class="typing-text mt-2" style="animation-duration: 0.5s">Okay okay, stop looking at me like that 😭
+                </p>
                 <div class="buttons-container pt-1">
                     <button id="s3-btn" class="btn btn-primary disappearing-btn">Seriously this time</button>
                 </div>
@@ -84,14 +98,14 @@
             <div class="pulse-heart hidden" id="s4-heart">❤️</div>
             <p id="s4-p1" class="typing-text hidden">Okay. No more jokes.</p>
             <p id="s4-p2" class="typing-text hidden romantic-text">This one is actually for you.</p>
-            
+
             <p id="s4-p3" class="typing-text hidden">I love...</p>
             <p id="s4-p4" class="typing-text hidden">...your smile.</p>
             <p id="s4-p5" class="typing-text hidden">...your laugh.</p>
             <p id="s4-p6" class="typing-text hidden">...the way you make ordinary days feel special.</p>
-            
+
             <p id="s4-p7" class="typing-text hidden mt-2">And most importantly...</p>
-            
+
             <h1 id="s4-confession" class="confession-text hidden">I LOVE YOU ❤️</h1>
         </div>
 
@@ -99,12 +113,12 @@
         <div id="screen-5" class="screen hidden dark-romantic">
             <p id="s5-p1" class="typing-text hidden">Now I have one very important question...</p>
             <h1 id="s5-q" class="question-text hidden shake">Do you love me too? 🥺👉👈</h1>
-            
+
             <div id="s5-buttons" class="buttons-container spread-buttons hidden">
                 <button id="btn-yes" class="btn btn-yes pulse-btn">I LOVE YOU TOO ❤️</button>
                 <button id="btn-no" class="btn btn-no">No, I don't love you 😐</button>
             </div>
-            
+
             <p id="s5-no-response" class="typing-text hidden mt-2 no-response-text"></p>
         </div>
 
@@ -121,12 +135,12 @@
                 </div>
             </div>
             <p class="typing-text hidden pt-1" id="end-p2">More than this tiny website could ever explain.</p>
-            
+
             <div id="end-replay-container" class="hidden mt-2">
                 <button id="btn-replay" class="btn btn-secondary fade-in">Replay our little story ✨</button>
             </div>
         </div>
-        
+
         <!-- Secret Story Screen -->
         <div id="screen-secret" class="screen hidden dark-romantic">
             <h2 class="heart-text pop-in">You found my secret ❤️</h2>
@@ -142,7 +156,8 @@
 
     <!-- Confetti & Audio (if needed) -->
     <canvas id="confetti-canvas"></canvas>
-    
+
     <script src="script.js"></script>
 </body>
+
 </html>
