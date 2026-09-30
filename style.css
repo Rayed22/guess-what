@@ -1,13 +1,14 @@
 :root {
-    --cream: #FFFBF5;
-    --soft-pink: #FFE4E1;
-    --peach: #FFDAB9;
-    --warm-red: #E63946;
-    --rose: #F08080;
-    --light-orange: #FFDAB9;
-    --text-dark: #333333;
-    --text-romantic: #4a2f3a;
-    --bg-dark: #1A1A1A;
+    /* White Rose Palette */
+    --cream: #FFFFFF;
+    --soft-pink: #FCEEF3;
+    --peach: #FAD9E6;
+    --warm-red: #C8476A;
+    --rose: #E07090;
+    --light-orange: #F9D0DF;
+    --text-dark: #2A2A2A;
+    --text-romantic: #3D1F2A;
+    --bg-dark: #0D0D1F;
 }
 
 * {
@@ -18,8 +19,8 @@
 }
 
 body {
-    background-color: var(--cream);
-    background-image: radial-gradient(circle at center, var(--soft-pink) 0%, var(--cream) 100%);
+    background-color: #FFFFFF;
+    background-image: radial-gradient(ellipse at top, #FCEEF3 0%, #FFFFFF 60%);
     color: var(--text-dark);
     min-height: 100vh;
     display: flex;
@@ -32,9 +33,10 @@ body {
 
 body.dark-mode {
     background-color: var(--bg-dark);
-    background-image: radial-gradient(circle at center, #2e1a22 0%, var(--bg-dark) 100%);
-    color: var(--soft-pink);
+    background-image: radial-gradient(ellipse at center, #1A0A1F 0%, var(--bg-dark) 100%);
+    color: #FFFFFF;
 }
+
 
 #app {
     width: 100%;
@@ -71,13 +73,13 @@ body.dark-mode {
 /* Screens Configuration */
 .screen {
     width: 90%;
-    background: rgba(255, 255, 255, 0.4);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(224, 112, 144, 0.15);
+    border-radius: 32px;
     padding: 2.5rem 2rem;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 8px 48px rgba(200, 71, 106, 0.08), 0 2px 12px rgba(0,0,0,0.04);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -88,10 +90,10 @@ body.dark-mode {
 }
 
 body.dark-mode .screen {
-    background: rgba(0, 0, 0, 0.4);
-    border-color: rgba(255, 182, 193, 0.2);
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-    color: var(--soft-pink);
+    background: rgba(20, 10, 35, 0.85);
+    border-color: rgba(224, 112, 144, 0.25);
+    box-shadow: 0 10px 50px rgba(200, 71, 106, 0.15);
+    color: #FFFFFF;
 }
 
 /* Typography styles */
