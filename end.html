@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For You ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playpen+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body data-page="end" class="dark-mode">
+    <div id="app">
+        <!-- Floating hearts container -->
+        <div id="hearts-container"></div>
+        
+        <!-- Waiting Messages UI -->
+        <div id="waiting-message" class="hidden">Are you still there? 👀</div>
+
+        
+        <!-- Screen 6: Celebration / End -->
+        <div id="screen-end" class="screen visible fade-in dark-romantic">
+            <h1 class="confession-text pop-in">I KNEW IT 😭❤️</h1>
+            <p id="end-p1" class="typing-text hidden text-center">Come here 🫂</p>
+            <div id="end-memes" class="hidden">
+                <div class="meme-card bounce mt-2" style="animation-delay: 1s">
+                    <div class="meme-content">
+                        <strong>Me pretending I don't miss you:</strong> 🙂<br>
+                        <strong>Me after 4 minutes:</strong> 🥺👉👈
+                    </div>
+                </div>
+            </div>
+            <p class="typing-text hidden pt-1" id="end-p2">More than this tiny website could ever explain.</p>
+            
+            <div id="end-replay-container" class="hidden mt-2">
+                <button id="btn-replay" class="btn btn-secondary fade-in">Replay our little story ✨</button>
+            </div>
+        </div>
+        
+
+    </div>
+    <canvas id="confetti-canvas"></canvas>
+    <script src="script.js"></script>
+</body>
+</html>

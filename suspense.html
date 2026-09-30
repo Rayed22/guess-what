@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For You ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playpen+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body data-page="suspense" >
+    <div id="app">
+        <!-- Floating hearts container -->
+        <div id="hearts-container"></div>
+        
+        <!-- Waiting Messages UI -->
+        <div id="waiting-message" class="hidden">Are you still there? 👀</div>
+
+        
+        <!-- Screen 2: Suspense Builder -->
+        <div id="screen-2" class="screen visible fade-in">
+            <div id="s2-p1" class="hidden"><p class="typing-text">There is something I’ve been meaning to tell you...</p></div>
+            <div id="s2-p2" class="hidden"><p class="typing-text">Something very important.</p></div>
+            <div id="s2-p3" class="hidden"><p class="typing-text">Something I probably should have said a long time ago.</p></div>
+            <div id="s2-p4" class="hidden"><p class="typing-text">But first...</p></div>
+            <div id="s2-btn-container" class="hidden mt-2">
+                <button id="s2-btn" class="btn disappearing-btn">Tell me already 😭</button>
+            </div>
+            <div id="s2-response" class="hidden">
+                <p class="typing-text meme-text">Patience, woman 😭</p>
+            </div>
+        </div>
+        
+
+    </div>
+    <canvas id="confetti-canvas"></canvas>
+    <script src="script.js"></script>
+</body>
+</html>

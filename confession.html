@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For You ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playpen+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body data-page="confession" class="dark-mode">
+    <div id="app">
+        <!-- Floating hearts container -->
+        <div id="hearts-container"></div>
+        
+        <!-- Waiting Messages UI -->
+        <div id="waiting-message" class="hidden">Are you still there? 👀</div>
+
+        
+        <!-- Screen 4: The Actual Confession -->
+        <div id="screen-4" class="screen visible fade-in dark-romantic">
+            <div class="pulse-heart hidden" id="s4-heart">❤️</div>
+            <p id="s4-p1" class="typing-text hidden">Okay. No more jokes.</p>
+            <p id="s4-p2" class="typing-text hidden romantic-text">This one is actually for you.</p>
+            
+            <p id="s4-p3" class="typing-text hidden">I love...</p>
+            <p id="s4-p4" class="typing-text hidden">...your smile.</p>
+            <p id="s4-p5" class="typing-text hidden">...your laugh.</p>
+            <p id="s4-p6" class="typing-text hidden">...the way you make ordinary days feel special.</p>
+            
+            <p id="s4-p7" class="typing-text hidden mt-2">And most importantly...</p>
+            
+            <h1 id="s4-confession" class="confession-text hidden">I LOVE YOU ❤️</h1>
+        </div>
+        
+
+    </div>
+    <canvas id="confetti-canvas"></canvas>
+    <script src="script.js"></script>
+</body>
+</html>

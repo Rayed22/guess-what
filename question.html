@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For You ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playpen+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body data-page="question" class="dark-mode">
+    <div id="app">
+        <!-- Floating hearts container -->
+        <div id="hearts-container"></div>
+        
+        <!-- Waiting Messages UI -->
+        <div id="waiting-message" class="hidden">Are you still there? 👀</div>
+
+        
+        <!-- Screen 5: The Question -->
+        <div id="screen-5" class="screen visible fade-in dark-romantic">
+            <p id="s5-p1" class="typing-text hidden">Now I have one very important question...</p>
+            <h1 id="s5-q" class="question-text hidden shake">Do you love me too? 🥺👉👈</h1>
+            
+            <div id="s5-buttons" class="buttons-container spread-buttons hidden">
+                <button id="btn-yes" class="btn btn-yes pulse-btn">I LOVE YOU TOO ❤️</button>
+                <button id="btn-no" class="btn btn-no">No, I don't love you 😐</button>
+            </div>
+            
+            <p id="s5-no-response" class="typing-text hidden mt-2 no-response-text"></p>
+        </div>
+        
+
+    </div>
+    <canvas id="confetti-canvas"></canvas>
+    <script src="script.js"></script>
+</body>
+</html>
