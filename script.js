@@ -130,10 +130,10 @@ document.addEventListener("DOMContentLoaded", async () => {
         // Start Screen 1 sequence
         await sleep(2000);
         showEl('s1-content1', 'fade-in');
-        await typeText('s1-p1', "I have something to tell you.");
+        await typeText('s1-p1', "Stop whatever you're doing.");
         await sleep(2000);
         showEl('s1-content2', 'fade-in');
-        await typeText('s1-p2', "Actually... maybe you should guess first. 😏");
+        await typeText('s1-p2', "I made this random little website just for you. 😏");
         
         const s1Btns = document.querySelectorAll('#s1-content2 .disappearing-btn');
         s1Btns.forEach(btn => {
@@ -143,10 +143,10 @@ document.addEventListener("DOMContentLoaded", async () => {
                 e.target.parentElement.classList.add('hidden');
                 
                 showEl('s1-response', 'fade-in');
-                if(replyType === 'okay') {
-                    await typeText('s1-response-text', "Where's the fun in that? 😭\n\nYou have to wait a little.", 40);
+                if(replyType === 'really') {
+                    await typeText('s1-response-text', "Yes really! And you have to click through it now.", 40);
                 } else {
-                    await typeText('s1-response-text', "Oh? You think you know me that well? 😏\n\nLet's see...", 40);
+                    await typeText('s1-response-text', "Wow, the lack of trust. 😭\n\nIt's a cute virus though.", 40);
                 }
                 
                 await sleep(1500);
@@ -154,8 +154,6 @@ document.addEventListener("DOMContentLoaded", async () => {
                 await sleep(2000);
                 showEl('s1-hint1', 'fade-in');
                 await sleep(2000);
-                showEl('s1-hint2', 'fade-in');
-                await sleep(3000);
                 
                 switchScreen('suspense.html');
             }, {once: true});
@@ -181,10 +179,10 @@ document.addEventListener("DOMContentLoaded", async () => {
             e.target.classList.add('hidden');
             showEl('s2-response', 'fade-in');
             await sleep(3000);
-            switchScreen('pizza.html');
+            switchScreen('movie.html');
         }, {once: true});
 
-    } else if (page === 'pizza') {
+    } else if (page === 'movie') {
         await sleep(1000);
         showEl('s3-p1', 'fade-in');
         await sleep(2000);

@@ -23,7 +23,7 @@ base_html = """<!DOCTYPE html>
 
     </div>
     <canvas id="confetti-canvas"></canvas>
-    <script src="script.js"></script>
+    <script src="script.js?v=3"></script>
 </body>
 </html>
 """
@@ -33,25 +33,24 @@ pages = {
         "class": "",
         "secret": '<div id="secret-heart" class="hidden">❤️</div>',
         "content": """
-        <!-- Screen 1: "Hey, guess what..." -->
+        <!-- Screen 1: The Hook -->
         <div id="screen-1" class="screen visible fade-in">
-            <h1 class="main-text suspense-text">Hey, guess what... 👀</h1>
+            <h1 class="main-text suspense-text">Hey you... 👀</h1>
             <div id="s1-content1" class="hidden">
-                <p id="s1-p1" class="typing-text">I have something to tell you.</p>
+                <p id="s1-p1" class="typing-text">Stop whatever you're doing.</p>
             </div>
             <div id="s1-content2" class="hidden">
-                <p id="s1-p2" class="typing-text">Actually... maybe you should guess first. 😏</p>
+                <p id="s1-p2" class="typing-text">I made this random little website just for you. 😏</p>
                 <div class="buttons-container stack-buttons">
-                    <button class="btn disappearing-btn" data-reply="okay">Okay, tell me 👀</button>
-                    <button class="btn disappearing-btn" data-reply="guess">Hmm... let me guess 🤔</button>
+                    <button class="btn disappearing-btn" data-reply="really">Oh really? 👀</button>
+                    <button class="btn disappearing-btn" data-reply="virus">Is it a virus? 🤔</button>
                 </div>
             </div>
             <div id="s1-response" class="hidden">
                 <p id="s1-response-text" class="typing-text"></p>
                 <div id="s1-response-continue" class="hidden mt-2">
-                    <p class="typing-text hint-text">Okay, here's a hint...</p>
-                    <p class="typing-text hidden" id="s1-hint1">It's something I've wanted to say to you for a while.</p>
-                    <p class="typing-text hidden" id="s1-hint2">And no, it's not about pizza. 🍕</p>
+                    <p class="typing-text hint-text">Anyway, I've been thinking about something today...</p>
+                    <p class="typing-text hidden" id="s1-hint1">And it's highly important. 😌</p>
                 </div>
             </div>
         </div>
@@ -63,12 +62,12 @@ pages = {
         "content": """
         <!-- Screen 2: Suspense Builder -->
         <div id="screen-2" class="screen visible fade-in">
-            <div id="s2-p1" class="hidden"><p class="typing-text">There is something I’ve been meaning to tell you...</p></div>
-            <div id="s2-p2" class="hidden"><p class="typing-text">Something very important.</p></div>
-            <div id="s2-p3" class="hidden"><p class="typing-text">Something I probably should have said a long time ago.</p></div>
-            <div id="s2-p4" class="hidden"><p class="typing-text">But first...</p></div>
+            <div id="s2-p1" class="hidden"><p class="typing-text">You know how much I love you...</p></div>
+            <div id="s2-p2" class="hidden"><p class="typing-text">And how lucky I am that you said yes to me...</p></div>
+            <div id="s2-p3" class="hidden"><p class="typing-text">Well, because of that...</p></div>
+            <div id="s2-p4" class="hidden"><p class="typing-text">I wanted to digitally ask you...</p></div>
             <div id="s2-btn-container" class="hidden mt-2">
-                <button id="s2-btn" class="btn disappearing-btn">Tell me already 😭</button>
+                <button id="s2-btn" class="btn disappearing-btn">Ask me what?! 😭</button>
             </div>
             <div id="s2-response" class="hidden">
                 <p class="typing-text meme-text">Patience, woman 😭</p>
@@ -76,28 +75,27 @@ pages = {
         </div>
         """
     },
-    "pizza": {
+    "movie": {
         "class": "",
         "secret": "",
         "content": """
         <!-- Screen 3: The Fake Confession -->
         <div id="screen-3" class="screen visible fade-in">
-            <p id="s3-p1" class="typing-text hidden">Okay. I'm ready.</p>
-            <p id="s3-p2" class="typing-text hidden">I have something to confess...</p>
-            <p id="s3-p3" class="typing-text hidden">I...</p>
-            <p id="s3-p4" class="typing-text hidden">really...</p>
-            <p id="s3-p5" class="typing-text hidden">really...</p>
+            <p id="s3-p1" class="typing-text hidden">Okay. Here it goes.</p>
+            <p id="s3-p2" class="typing-text hidden">Can we...</p>
+            <p id="s3-p3" class="typing-text hidden">please...</p>
+            <p id="s3-p4" class="typing-text hidden">watch...</p>
+            <p id="s3-p5" class="typing-text hidden">a...</p>
             
             <div id="s3-reveal" class="hidden pizza-reveal">
-                <h1 class="bounce">like... pizza 🍕</h1>
+                <h1 class="bounce">movie tonight? 🍿</h1>
                 <div class="meme-card bounce mt-2" style="animation-delay: 0.5s">
                     <div class="meme-content">
-                        <strong>My brain when you text me:</strong><br>
-                        🧠: "Act normal."<br>
-                        Me: 😭❤️😭❤️
+                        <strong>Me waiting for you to pick a movie:</strong><br>
+                        🧍💀
                     </div>
                 </div>
-                <p class="typing-text mt-2" style="animation-duration: 0.5s">Okay okay, stop looking at me like that 😭</p>
+                <p class="typing-text mt-2" style="animation-duration: 0.5s">Okay okay, I'm just kidding 😭</p>
                 <div class="buttons-container pt-1">
                     <button id="s3-btn" class="btn btn-primary disappearing-btn">Seriously this time</button>
                 </div>
@@ -113,7 +111,7 @@ pages = {
         <div id="screen-4" class="screen visible fade-in dark-romantic">
             <div class="pulse-heart hidden" id="s4-heart">❤️</div>
             <p id="s4-p1" class="typing-text hidden">Okay. No more jokes.</p>
-            <p id="s4-p2" class="typing-text hidden romantic-text">This one is actually for you.</p>
+            <p id="s4-p2" class="typing-text hidden romantic-text">I just wanted to make this to remind you...</p>
             
             <p id="s4-p3" class="typing-text hidden">I love...</p>
             <p id="s4-p4" class="typing-text hidden">...your smile.</p>
@@ -132,12 +130,12 @@ pages = {
         "content": """
         <!-- Screen 5: The Question -->
         <div id="screen-5" class="screen visible fade-in dark-romantic">
-            <p id="s5-p1" class="typing-text hidden">Now I have one very important question...</p>
-            <h1 id="s5-q" class="question-text hidden shake">Do you love me too? 🥺👉👈</h1>
+            <p id="s5-p1" class="typing-text hidden">Now for the most important question...</p>
+            <h1 id="s5-q" class="question-text hidden shake">Are you still obsessed with me? 🥺👉👈</h1>
             
             <div id="s5-buttons" class="buttons-container spread-buttons hidden">
-                <button id="btn-yes" class="btn btn-yes pulse-btn">I LOVE YOU TOO ❤️</button>
-                <button id="btn-no" class="btn btn-no">No, I don't love you 😐</button>
+                <button id="btn-yes" class="btn btn-yes pulse-btn">YES ALWAYS ❤️</button>
+                <button id="btn-no" class="btn btn-no">No, I'm over you 😐</button>
             </div>
             
             <p id="s5-no-response" class="typing-text hidden mt-2 no-response-text"></p>
@@ -329,10 +327,10 @@ document.addEventListener("DOMContentLoaded", async () => {
         // Start Screen 1 sequence
         await sleep(2000);
         showEl('s1-content1', 'fade-in');
-        await typeText('s1-p1', "I have something to tell you.");
+        await typeText('s1-p1', "Stop whatever you're doing.");
         await sleep(2000);
         showEl('s1-content2', 'fade-in');
-        await typeText('s1-p2', "Actually... maybe you should guess first. 😏");
+        await typeText('s1-p2', "I made this random little website just for you. 😏");
         
         const s1Btns = document.querySelectorAll('#s1-content2 .disappearing-btn');
         s1Btns.forEach(btn => {
@@ -342,10 +340,10 @@ document.addEventListener("DOMContentLoaded", async () => {
                 e.target.parentElement.classList.add('hidden');
                 
                 showEl('s1-response', 'fade-in');
-                if(replyType === 'okay') {
-                    await typeText('s1-response-text', "Where's the fun in that? 😭\n\nYou have to wait a little.", 40);
+                if(replyType === 'really') {
+                    await typeText('s1-response-text', "Yes really! And you have to click through it now.", 40);
                 } else {
-                    await typeText('s1-response-text', "Oh? You think you know me that well? 😏\n\nLet's see...", 40);
+                    await typeText('s1-response-text', "Wow, the lack of trust. 😭\n\nIt's a cute virus though.", 40);
                 }
                 
                 await sleep(1500);
@@ -353,8 +351,6 @@ document.addEventListener("DOMContentLoaded", async () => {
                 await sleep(2000);
                 showEl('s1-hint1', 'fade-in');
                 await sleep(2000);
-                showEl('s1-hint2', 'fade-in');
-                await sleep(3000);
                 
                 switchScreen('suspense.html');
             }, {once: true});
@@ -380,10 +376,10 @@ document.addEventListener("DOMContentLoaded", async () => {
             e.target.classList.add('hidden');
             showEl('s2-response', 'fade-in');
             await sleep(3000);
-            switchScreen('pizza.html');
+            switchScreen('movie.html');
         }, {once: true});
 
-    } else if (page === 'pizza') {
+    } else if (page === 'movie') {
         await sleep(1000);
         showEl('s3-p1', 'fade-in');
         await sleep(2000);
