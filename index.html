@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playpen+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
-<body data-page="index" >
+<body data-page="index">
     <div id="app">
         <!-- Floating hearts container -->
         <div id="hearts-container"></div>
@@ -15,10 +15,12 @@
         <!-- Waiting Messages UI -->
         <div id="waiting-message" class="hidden">Are you still there? 👀</div>
 
-        
         <!-- Screen 1: The Hook -->
         <div id="screen-1" class="screen visible fade-in">
-            <h1 class="main-text suspense-text">Hey you... 👀</h1>
+            <!-- Two opening lines that appear sequentially -->
+            <h1 id="s1-open1" class="main-text suspense-text">Ei.....</h1>
+            <h2 id="s1-open2" class="main-text hidden" style="font-size:1.7rem; color:var(--rose);">shuno na....</h2>
+
             <div id="s1-content1" class="hidden">
                 <p id="s1-p1" class="typing-text">Stop whatever you're doing.</p>
             </div>
@@ -37,10 +39,9 @@
                 </div>
             </div>
         </div>
-        
 
     </div>
     <canvas id="confetti-canvas"></canvas>
-    <script src="script.js?v=3"></script>
+    <script src="script.js?v=4"></script>
 </body>
 </html>

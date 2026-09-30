@@ -127,7 +127,9 @@ document.addEventListener("DOMContentLoaded", async () => {
             switchScreen('secret.html');
         });
 
-        // Start Screen 1 sequence
+        // Start Screen 1 sequence — two opening lines first
+        await sleep(1500);
+        showEl('s1-open2', 'fade-in');    // "shuno na...." fades in under "Ei....."
         await sleep(2000);
         showEl('s1-content1', 'fade-in');
         await typeText('s1-p1', "Stop whatever you're doing.");
