@@ -81,35 +81,55 @@ function createConfetti() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
     
-    const confettiCount = 150;
-    const confettiParams = [];
-    for(let i=0; i<confettiCount; i++) {
-        confettiParams.push({
+    const particles = [];
+    // White Rose palette colors
+    const colors = ['#E07090', '#FAD9E6', '#FFFFFF', '#C8476A'];
+    
+    for(let i=0; i<70; i++) {
+        particles.push({
             x: canvas.width / 2,
-            y: canvas.height / 2 + 100,
-            r: Math.random() * 6 + 2,
-            dx: Math.random() * 10 - 5,
-            dy: Math.random() * -15 - 5,
-            color: ['#E63946', '#F08080', '#FFE4E1', '#FFDAB9', '#FFF'][Math.floor(Math.random()*5)]
+            y: canvas.height / 2,
+            size: Math.random() * 15 + 8,
+            speedY: (Math.random() - 0.5) * 8 - 1.5, // float upwards slightly
+            speedX: (Math.random() - 0.5) * 10,
+            color: colors[Math.floor(Math.random() * colors.length)],
+            isHeart: Math.random() > 0.4,
+            opacity: 1
         });
     }
 
     function animate() {
         requestAnimationFrame(animate);
         ctx.clearRect(0,0,canvas.width, canvas.height);
-        for(let i=0; i<confettiParams.length; i++) {
-            let p = confettiParams[i];
-            ctx.beginPath();
-            ctx.arc(p.x, p.y, p.r, 0, Math.PI*2, false);
-            ctx.fillStyle = p.color;
-            ctx.fill();
-            p.x += p.dx;
-            p.y += p.dy;
-            p.dy += 0.3; // gravity
+        for(let i=0; i<particles.length; i++) {
+            let p = particles[i];
+            p.x += p.speedX;
+            p.y += p.speedY;
+            p.speedY -= 0.04; // float UP instead of gravity
+            p.speedX *= 0.95; // air friction
+            p.speedY *= 0.95;
+            p.opacity -= 0.005; // slow fade
+            
+            if (p.opacity <= 0) continue;
+            
+            ctx.globalAlpha = Math.max(0, p.opacity);
+            if (p.isHeart) {
+                ctx.font = (p.size * 1.5) + "px Arial";
+                ctx.fillText('❤️', p.x, p.y);
+            } else {
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.size/2, 0, Math.PI*2);
+                ctx.fillStyle = p.color;
+                ctx.shadowBlur = 15;
+                ctx.shadowColor = p.color;
+                ctx.fill();
+                ctx.shadowBlur = 0;
+            }
         }
+        ctx.globalAlpha = 1;
     }
     animate();
-    setTimeout(() => { canvas.style.opacity = 0; canvas.style.transition = 'opacity 2s'; }, 3000);
+    setTimeout(() => { canvas.style.opacity = 0; canvas.style.transition = 'opacity 3s'; }, 4000);
 }
 
 // ---------------------------------------------------------------- //
