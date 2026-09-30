@@ -7,37 +7,34 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playpen+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
-<body data-page="movie" >
+<body data-page="movie">
     <div id="app">
-        <!-- Floating hearts container -->
         <div id="hearts-container"></div>
-        
-        <!-- Waiting Messages UI -->
         <div id="waiting-message" class="hidden">Are you still there? 👀</div>
 
-        
-        <!-- Screen 3: The Fake Confession -->
+        <!-- Screen 3: The Fake-out -->
         <div id="screen-3" class="screen visible fade-in">
-            <p id="s3-p1" class="typing-text hidden">Okay, serious thing real quick.</p>
-            <p id="s3-p2" class="typing-text hidden">I have a confession to make.</p>
-            
+            <p id="s3-p1" class="typing-text hidden" style="font-size:2rem; font-weight:800;">I...</p>
+            <p id="s3-p2" class="typing-text hidden" style="font-size:2rem; font-weight:800;">love...</p>
+            <p id="s3-p3" class="typing-text hidden" style="font-size:2.4rem; font-weight:800; color:var(--warm-red);">you</p>
+
             <div id="s3-reveal" class="hidden pizza-reveal">
+                <p id="s3-your" class="typing-text" style="font-size:2.4rem; font-weight:800; color:var(--warm-red);">your</p>
                 <div class="meme-card bounce mt-2">
                     <div class="meme-content">
-                        <strong>The confession:</strong><br>
-                        I ate your snacks. All of them. 😭
+                        picture as my wallpaper 🥺<br><br>
+                        <span style="font-size:0.95rem; opacity:0.8;">and I stare at it for an abnormal amount of time</span>
                     </div>
                 </div>
-                <p class="typing-text mt-2">Okay okay — that's not what this is about.</p>
+                <p class="typing-text mt-2">Okay okay — that's not what this is about. 😭</p>
                 <div class="buttons-container pt-1">
                     <button id="s3-btn" class="btn btn-primary disappearing-btn">Seriously this time</button>
                 </div>
             </div>
         </div>
-        
 
     </div>
     <canvas id="confetti-canvas"></canvas>
-    <script src="script.js?v=3"></script>
+    <script src="script.js?v=4"></script>
 </body>
 </html>

@@ -184,13 +184,17 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     } else if (page === 'movie') {
         await sleep(1000);
-        showEl('s3-p1', 'fade-in');
-        await sleep(2000);
-        showEl('s3-p2', 'fade-in');
-        await sleep(2500); // short dramatic pause, then...
-        
-        showEl('s3-reveal', 'fade-in');
-        
+        showEl('s3-p1', 'fade-in');       // "I..."
+        await sleep(2200);
+        showEl('s3-p2', 'fade-in');       // "love..."
+        await sleep(2200);
+        showEl('s3-p3', 'fade-in');       // "you"  ← heart stops here
+        await sleep(1800);
+
+        // The twist: hide "you", show the reveal which starts with "your"
+        hideEl('s3-p3');
+        showEl('s3-reveal', 'fade-in');   // "your" + meme card drops in
+
         document.getElementById('s3-btn').addEventListener('click', async (e) => {
             e.target.classList.add('hidden');
             switchScreen('confession.html');
