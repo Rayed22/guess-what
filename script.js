@@ -236,6 +236,8 @@ document.addEventListener("DOMContentLoaded", async () => {
         showEl('s5-p1', 'fade-in');
         await sleep(2000);
         showEl('s5-q', 'fade-in');
+        await sleep(1000);
+        showEl('s5-extra', 'fade-in');   // "I love you moreeeeeee ❤️"
         await sleep(1500);
         showEl('s5-buttons', 'fade-in');
         
