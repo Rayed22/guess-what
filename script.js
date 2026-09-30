@@ -187,13 +187,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         showEl('s3-p1', 'fade-in');
         await sleep(2000);
         showEl('s3-p2', 'fade-in');
-        await sleep(2500);
-        showEl('s3-p3', 'fade-in');
-        await sleep(1500);
-        showEl('s3-p4', 'fade-in');
-        await sleep(1500);
-        showEl('s3-p5', 'fade-in');
-        await sleep(2000);
+        await sleep(2500); // short dramatic pause, then...
         
         showEl('s3-reveal', 'fade-in');
         
